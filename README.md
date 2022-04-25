@@ -1,6 +1,7 @@
 # Repo for experiments with Reinforcment algortihms
 
 #### Currently is implemented only Deep Q-Network
+     (Implementation of Policy Nework is planned)
 
 Solved can be any environment which is included in openai gym https://gym.openai.com/ and has 1-D state vector 
 
