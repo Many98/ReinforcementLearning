@@ -77,7 +77,7 @@ counter player scores.
 Maybe I there is needed more training...
 
 
-Hyperparameters that yelded current best results were:
+Hyperparameters that yielded current best results were:
 
 - batch_size: 64
 - dataset_size: 1024
