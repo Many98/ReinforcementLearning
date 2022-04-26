@@ -123,15 +123,25 @@ def plot_learning_history(metrics):
     #epochs = [0 for i in range(len(reward_exploration))] + epochs
     episodes = [i for i in range(len(reward_learning + reward_exploration))]
 
+    def running_mean(x, N):
+        x = np.insert(x, 0, 0)
+        N = min(N, len(x))
+        cumsum = np.cumsum(x)
+        c = cumsum[1: N-1] / np.arange(1, N-1)
+        return np.insert(np.concatenate([c[:N], (cumsum[N:] - cumsum[:-N]) / N]), 0, c[0])
+
+    moving_mean = running_mean(np.array(reward_exploration + reward_learning), 100)
+
     ax.plot(episodes[:len(reward_exploration)], reward_exploration, linestyle='dashed')
     ax.plot(episodes[len(reward_exploration)-1:-1], reward_learning)
+    ax.plot(episodes, moving_mean, 'red')
     #ax.xaxis.set_ticks(episodes)
     #locator = MaxNLocator(nbins=10)
     #ax.set_xticks
     #ax.set_xticklabels([(episode, epoch) for episode, epoch in zip(episodes, epochs)])
     #ax.tick_params(axis='x', labelrotation=45)
 
-    ax.legend(['Initial exploration', 'Learning'], loc='upper right')
+    ax.legend(['Initial exploration', 'Learning', 'Moving average reward'], loc='upper right')
 
     ax.set_title('Agent learning')
     ax.set_ylabel('Reward')
@@ -140,3 +150,16 @@ def plot_learning_history(metrics):
     plt.tight_layout()
 
     return fig
+
+if __name__ == '__main__':
+    pong ='/disk/fratrik/agents/pong/test_31/metrics.json'
+    lander = '/disk/fratrik/agents/lunar_lander/test_20/metrics.json'
+    import json
+    import os
+    with open(pong) as json_file:
+        p = json.load(json_file)
+    with open(lander) as json_file:
+        l = json.load(json_file)
+    p = {"exploration": [-21.0, -20.0, -21.0, -21.0, -21.0, -19.0, -20.0], "learning": []}
+    fig = plot_learning_history(p)
+    print('f')
