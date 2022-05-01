@@ -113,31 +113,43 @@ Best Hyperparams used were:
 ![learning_history](https://user-images.githubusercontent.com/65658910/165336279-f2c9b4cd-d06b-46f8-93bc-7de27784180f.png)
 
 
-#### After 100 episodes (just exploration)
+#### After 100 episodes 
+Agent just explore its environment.
 
 https://user-images.githubusercontent.com/65658910/165178406-2f697b7a-43d9-4174-82ce-446d2dcb0985.mp4
 
-#### After 1000 episodes (still only initial exploration :D)
+#### After 1000 episodes 
+Still exploration and memorizing of experiences.
 
 https://user-images.githubusercontent.com/65658910/165178542-38dd3270-a9ca-4ab0-b880-280254258f5d.mp4
 
-#### Episode 1410 (finally some learning)
+#### Episode 1410 
+Agent finally started learning and find out how to stabilize itself.
 
 https://user-images.githubusercontent.com/65658910/165179108-4ff31c03-7603-4258-87e3-f2ec59555859.mp4
 
 
-
-#### Episode 1850)
+#### Episode 1850 
+Agent discovered that touching a surface with leg gives reward.
 
 https://user-images.githubusercontent.com/65658910/165179263-61fb075a-c05b-4ffb-b4d7-58f8b72a3b10.mp4
 
 
 #### Episode 2035
+
 https://user-images.githubusercontent.com/65658910/165179276-b8622348-db29-49e8-bd04-c520c9b45009.mp4
+
+#### Episode 2460
+Agent discovered near optimal strategy.
+
+
+https://user-images.githubusercontent.com/65658910/166160358-ab2808b2-0c45-4f08-b0b1-d02fdb66803d.mp4
 
 
 
 #### Episode 10000
+It took some time to master optimal strategy of quick landing with small fuel usage.
+
 https://user-images.githubusercontent.com/65658910/165179316-ba426445-268d-49ec-9713-0bdc0f09c8e9.mp4
 
 
