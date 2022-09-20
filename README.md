@@ -1,4 +1,4 @@
-# Repo for experiments with Reinforcment algortihms
+# Repo for experiments with Reinforcement algortihms
 
 #### Currently is implemented only Deep Q-Network
 
