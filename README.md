@@ -1,12 +1,15 @@
-# Repo for experiments with Reinforcement algortihms
+# Reinforcement Algorithm Experiments
 
-#### Currently is implemented only Deep Q-Network
+This repository is dedicated to experiments with reinforcement learning algorithms. It's a space for implementation, testing, and learning.
 
-Implementation of Policy Nework is planned
+## Current Implementation
+Deep Q-Network (DQN): As of now, the repository features an implementation of the Deep Q-Network.
 
-Solved can be any environment which is included in openai gym https://gym.openai.com/ and has 1-D state vector 
+## Future Plans
+Policy Network: The next step is to implement a Policy Network.
 
-`TODO add How to use ...`
+## Applicability
+OpenAI Gym Compatibility: The implemented algorithms can solve any environment included in OpenAI Gym ((https://gymnasium.farama.org/) that uses a 1-D state vector.
 
 
 Implemented DQN was used for solving Pong environmnet (https://gym.openai.com/envs/Pong-ram-v0/) and 
